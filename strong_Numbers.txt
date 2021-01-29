@@ -1,0 +1,46 @@
+using namespace std;
+int factorial(int n);
+int main()
+ {
+     int T;
+     cin>>T;
+     while(T--){
+     int N,sum=0,fact=0;
+     cin>>N;
+     int checkNumber=N;
+
+	  
+	  while(N>0){
+	    int temp=N%10;
+	    N=N/10;
+	    fact=factorial(temp);
+	    
+	    sum=sum+fact;
+	   
+	      
+	  }
+	   
+	if(checkNumber==sum)    
+	 cout<<"Strong" ;
+	 else
+	 cout<<"Not Strong" ;
+	 
+	 cout<<endl;
+     }
+	return 0;
+}
+
+ int factorial(int n){
+    int fact=1;
+    if(n==0){
+    }
+    else{
+    
+    while(n>0){
+        fact=fact*n;
+        n--;
+    }
+}
+    return fact;
+    }
+    
